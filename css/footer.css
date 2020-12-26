@@ -1,0 +1,97 @@
+#footer {
+	padding: 37px 0 30px;
+	font-size: 12px;
+	color: rgba(219,214,196,.2);
+	background: #26221d url(../images/footerbackground.png);
+	position: relative;
+	z-index: 2;
+}
+#footer:before {
+	content: '';
+	display: block;
+	overflow: hidden;
+	height: 35px;
+	width: 100%;
+	top: -34px;
+	left: 0;
+	position: absolute;
+	background: url(../images/xbg-contact-shadow.png.pagespeed.ic.8t8uaaKL8a.webp) repeat-x 50% -40%;
+	z-index: 10;
+}
+#footer:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+#footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.social-networks {
+	float: right;
+	margin-top: -6px!important;
+	text-align: right;
+	padding: 0 0 0 12px!important;
+}
+.social-networks li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 6px;
+	text-align: left;
+}
+.social-networks a.facebook {
+	text-indent: 0;
+	background-position: 0 0;
+}
+.social-networks a {
+	display: block;
+	width: 35px;
+	height: 34px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+	background-position: 0 -9999px;
+}
+.social-networks a.facebook:before {
+	background-position: -40px -75px;
+}
+.social-networks a:after,
+.social-networks a:before {
+	content: '';
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../images/border.webp) no-repeat 0 -75px;
+	background-size: 200px 150px;
+	transition: all .3s linear;
+}
+.social-networks a.facebook span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+	margin: 2px 0 0;
+}
+.copyright {
+	float: left;
+	width: 200px;
+	margin: 2px 0 0;
+	font-weight: 500;
+}
+.social-networks a.twitter:after {
+	background-position: 0 -115px;	
+}
+.social-networks a:after {
+	z-index: 2;
+}
+.social-networks a.linkedin:before {
+	background-position: -40px -75px;
+}
+.social-networks a.linkedin:after {
+	background-position: -40px -115px;
+}

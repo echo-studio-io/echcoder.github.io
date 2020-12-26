@@ -1,44 +1,311 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Echo World</title>
-        <style type="text/css">
-            body {
-                font-family: 'Open Sans', sans-serif;
-                color: #777;
-                margin: 0 auto;
-                cursor: default;
-                text-align: center;
-                font-size: 18px;
-                background: #474747 url('data:image/gif;base64,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');
-            }
-
-            .echo {
-                /* width: 200px;
-                height: 200px;
-                border-radius: 50px;
-                background: #474747;
-                box-shadow: inset 5px 5px 10px #3c3c3c, 
-                            inset -5px -5px 10px #525252; */
-
-                font-size: 22px;
-                background-color: #282828;
-                width: 224px;
-                margin: 0 auto;
-                padding: 8px;
-                border-radius: 4px;
-                box-shadow: inset 0 2px 2px #111;
-                padding-left: 128px;
-                border-bottom: 1px solid #666;
-                position: relative;
-                overflow: hidden;
-                margin-top: 64px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="echo">
-        </div>
-        Sitecraft
-    </body>
+<head>
+	<title>Sitecraft. We build awesome websites</title>
+	<link rel="icon" type="img/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/body.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<style>
+		@font-face{font-family: handwriting_draft; src: url('fonts/handwriting_draft.woff2');}
+		@font-face{font-family: Montserrat; src: url('fonts/montserrat-light-webfont.woff2');}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<header id="header">
+		<div class="container">
+			<strong class="logo"></strong>
+			<nav id="navigation">
+				<div class="holder">
+					<ul>
+						<li>
+							<a href="#">
+								Services
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Why Us
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Testimonials
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								About
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Contact Us
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main id="main">
+		<div class="main-holder">
+			<section class="intro">
+				<div class="container">
+					<img src="images/xrobots.png.pagespeed.ic.gL0I6i0zZ8.webp" alt="Intro">
+					<div class="intro-text">
+						<div class="holder">
+							<h1>WE BUILD WEBITES</h1>
+							<p>From elegant handcrafted pages to enterprise <br>solutions - a team of passionate coders can’t wait to <br>fully immerse themselves in your project</p>
+							<div class="btn-holder">
+								<a href="#" class="btn" data-text="Contact Us">Contact Us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="services" class="section">
+				<h2>Services</h2>
+				<div class="services">
+					<div class="services-holder">
+						<div class="box">
+							<img src="images/92xNxicon-service01.png.pagespeed.ic.n2RkmsTXwf.webp" width="92">
+							<h3>Front - End Development</h3>
+							<p>We create valid HTML5/CSS3 with<br>rich JS animation and<br>functionality</p>
+						</div>
+						<div class="box">
+							<img src="images/92xNxicon-service02.png.pagespeed.ic.zfs2IRKsA3.webp" width="92">
+							<h3>Back - End<br>Development</h3>
+							<p>We code server side solutions<br>based on popular PHP frameworks<br>and CMS</p>
+						</div>
+						<div class="box">
+							<img src="images/92xNxicon-service03.png.pagespeed.ic.ppiXHZt-Xd.webp" width="92">
+							<h3>IT<br>Consulting</h3>
+							<p>We'll help you to increase your<br>efficiency with technology-driven<br> transformation of your IT</p>
+						</div>
+						<div class="box">
+							<img src="images/92xNxicon-service04.png.pagespeed.ic.09QdU09k7b.webp" width="92">
+							<h3>Dedicated<br>Teams</h3>
+							<p>We'll offer you an accurate solution<br>tailored to your specific<br> development needs</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="reasons" class="section reasons">
+				<div class="container">
+					<h2>Five reasons<br>to work with us</h2>
+					<div class="reason-box">
+						<img src="images/93xNxicon-reason01.png.pagespeed.ic.__7VZDiOnZ.webp" width="93">
+						<h3>We love you!</h3>
+						<p>Seriously, every new request you send our way, every project we do together helps us to get better and stronger. Thanks so much for this opportunity!
+                        </p>
+					</div>
+					<div class="reason-box">
+						<img src="images/93xNxicon-reason02.png.pagespeed.ic.S1YLMM-Nxp.webp" width="93">
+						<h3>Team</h3>
+						<p>People matter. That’s why we are a group of like-minded folks who have known each other for quite some time. With the average experience of 8+ years in web-development we are the ultimate solution for your Business!
+                        </p>
+					</div>
+					<div class="reason-box">
+						<img src="images/93xNxicon-reason03.png.pagespeed.ic.vdevyclo46.webp" width="93">
+						<h3>Expertise</h3>
+						<p>We don’t promise to build a spaceship for you, although we could actually build one:-) Still there is a lot we could potentially help you with and the list is growing over time!</p>
+					</div>
+					<div class="reason-box">
+						<img src="images/93xNxicon-reason04.png.pagespeed.ic.C09zZXD0KY.webp" width="93">
+						<h3>Flexibility</h3>
+						<p>We have standards and workflow of our own. Still we are always open to see how SiteCraft could adjust to your particular process. When in Rome, do as the Romans do!
+                        </p>
+					</div>
+					<div class="reason-box">
+						<img src="images/93xNxicon-reason05.png.pagespeed.ic.C6mgIuiMZf.webp" width="93">
+						<h3>Quality</h3>
+						<p>We use all modern testing techniques, both, manual and software enhanced to leave no stone unturned and deliver a product you’ll definitely fall in love with!</p>
+					</div>
+				</div>
+			</section>
+			<section id="testimonials" class="section testimonials">
+				<div class="container">
+					<h2>Testimonials</h2>
+					<img src="images/ximg-owl.png.pagespeed.ic.3G_fUa9kBr.webp">
+					<div class="reviews gallery-js-ready autorotation-active">
+						<div class="slideset">
+							<div class="slide" style="display: block; opacity: 1;">
+								<blockquote>
+									<cite>
+										<span class="img-place">
+											<img src="images/xphoto_jason.png.pagespeed.ic.RnzRWFKk7V.webp" width="127">
+										</span>
+										Jason Anthony
+										<span>President, Speak! Agency</span>
+										<span>
+											<a href="#" target="_blank" rel="nofollow noopener">speakagency.com</a>
+										</span>
+									</cite>
+									<q>
+										<span>
+											“SiteCraft went above and beyond for us, working under very tight time constraints to deliver a wonderful WordPress site. Their project management team was top notch, ensuring every detail was just right. I consider them a true partner and an extension of our team.”
+										</span>
+									</q>
+								</blockquote>
+							</div>
+							<div class="slide" style="display: block; opacity: 0;">
+								<blockquote>
+									<cite>
+										<span class="img-place">
+											<img src="images/xphoto_ehud.png.pagespeed.ic.MII64rNwu6.webp" width="127">
+										</span>
+										Ehud Zamir
+										<span>Founder & CEO</span>
+										<span>
+											<a href="#" target="_blank" rel="nofollow noopener">greetingsland.com</a>
+										</span>
+									</cite>
+									<q>
+										<span>
+											“SiteCraft is a team of professionals, delivered our project perfectly and on time. Looking forward to work with you again.”
+										</span>
+									</q>
+								</blockquote>
+							</div>
+							<div class="slide" style="display: block; opacity: 0;">
+								<blockquote>
+									<cite>
+										<span class="img-place">
+											<img src="images/xphoto_cem.png.pagespeed.ic.n2o8ecdYXw.webp" width="127">
+										</span>
+										Cem Hurturk
+										<span>Co Founder at Sendloop & Octeth, Inc.</span>
+										<span>
+											<a href="#" target="_blank" rel="nofollow noopener">sendloop.com</a>
+										</span>
+									</cite>
+									<q>
+										<span>
+											“We are working with SiteCraft for a couple of months and we are quite happy with them. The quality of the work they deliver, their communication, honesty and delivery speed is excellent.”
+										</span>
+									</q>
+								</blockquote>
+							</div>
+							<div class="slide" style="display: block; opacity: 0;">
+								<blockquote>
+									<cite>
+										<span class="img-place">
+											<img src="images/xphoto03.png.pagespeed.ic.KAJIRq00cq.webp" width="127">
+										</span>
+										Reserved for you
+									</cite>
+									<q>
+										<span>No fake stuff here</span>
+										<span>
+											We would be grateful if you could say a few words about our work to let everyone know how happy you are with us, if you really are
+										</span>
+									</q>
+								</blockquote>
+							</div>
+						</div>
+						<div class="pagination">
+								<ul>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li class>
+										<a href="#">2</a>
+									</li>
+									<li class>
+										<a href="#">3</a>
+									</li>
+									<li class>
+										<a href="#">4</a>
+									</li>
+								</ul>
+						</div>
+					</div>
+					<h2>Our Awards</h2>
+					<ul class="block-awards">
+						<li>
+							<a href="#" class="award" target="_blank" rel="nofollow noopener">
+								<img src="images/xlogo_1.png.pagespeed.ic.FLdFrMyxbf.webp" width="200" height="184">
+							</a>
+							<span>One Page Love Award</span>
+						</li>
+						<li>
+							<a href="#" class="award" target="_blank" rel="nofollow noopener">
+								<img src="images/xlogo_2.png.pagespeed.ic.2hxOgmXDlj.webp" width="181" height="184">
+							</a>
+							<span>Design Nominees "SOTD"</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="section contact-section">
+				<div class="container">
+					<div id="about" class="text-box">
+						<div class="heading">
+							<h3>About&nbsp;Us</h3>
+						</div>
+						<img src="images/396xNxlogo-footer.png.pagespeed.ic.vqwm2Lp1TF.webp" width="396">
+						<p>
+							If you made it this far, you are most likely to know everything about us. So let's make it more personal: we've got four kids, two motorbike riders, four gamers, two travellers, three tattoo fans and one scotch lover:-) The weirdest thing is, we complement each other very well. Want to learn more? Let's make friends!
+						</p>
+					</div>
+					<div id="contact" class="contact-box">
+						<form name="contact_request" class="js-validation">
+							<fieldset>
+								<h3>Contact Us</h3>
+								<div class="row">
+									<input type="text" id="contact_request_name" name="contact_request[name]" placeholder="Name">
+								</div>
+								<div class="row">
+									<input type="text" id="contact_request_email" name="contact_request[email]" placeholder="Email">
+								</div>
+								<div class="row">
+									<textarea id="contact_request_message" name="contact_request[message]" placeholder="Message" cols="30" rows="10"></textarea>
+								</div>
+								<div class="row">
+									<div class="attachments-holder">
+										<div class="attachments-holder-inner">
+											<div class="file-chooser-holder">
+												<label for="file-chooser">Click upload or drop files here</label>
+												<input type="file" id="file-chooser" class="file-chooser validate-uploader" multiple>
+											</div>
+											<ul class="attachments-list"></ul>
+											<input type="hidden" id="contact_request_attachment" name="contact_request[attachments]" class="attachments-data">
+										</div>
+									</div>
+								</div>
+								<button class="btn" data-text="SEND"></button>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer id="footer">
+		<div class="container">
+			<ul class="social-networks">
+				<li>
+					<a href="#" class="facebook" target="_blank">
+						<span>
+							<img src="images/facebook-logo.svg" alt="facebook" width="20" height="20">
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="twitter" target="_blank" rel="nofollow noopener">Twitter</a>
+				</li>
+				<li>
+					<a href="#" class="linkedin" target="_blank" rel="nofollow noopener">Linkedin</a>
+				</li>
+			</ul>
+			<span class="copyright">© 2016-2017 SiteCraft.co</span>
+			<ul class="footer-nav"></ul>
+		</div>
+	</footer>
+</div>
+</body>
 </html>
