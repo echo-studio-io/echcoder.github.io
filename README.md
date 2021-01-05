@@ -10,3 +10,4 @@
 | websocket | https://tools.ietf.org/html/rfc6455 |
 |  ----  |  ----  |
 | http3 | https://http3.net/ |
+| openssl | https://www.openssl.org/ |
