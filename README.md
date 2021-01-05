@@ -8,3 +8,5 @@
 | Oauth | https://tools.ietf.org/html/rfc6749 |
 |  ----  |  ----  |
 | websocket | https://tools.ietf.org/html/rfc6455 |
+|  ----  |  ----  |
+| http3 | https://http3.net/ |
