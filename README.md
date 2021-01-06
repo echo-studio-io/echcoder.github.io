@@ -13,3 +13,5 @@
 | openssl | https://www.openssl.org/ |
 |  ----  |  ----  |
 |  ffmpeg  |  https://ffmpeg.org/  |
+|  ----  |  ----  |
+|  mDNS  |  ----  |
