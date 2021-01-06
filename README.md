@@ -14,4 +14,4 @@
 |  ----  |  ----  |
 |  ffmpeg  |  https://ffmpeg.org/  |
 |  ----  |  ----  |
-|  mDNS  |  ----  |
+|  mDNS  |  https://tools.ietf.org/html/rfc6762 <br> https://tools.ietf.org/id/draft-ietf-rtcweb-mdns-ice-candidates-02.html  |
